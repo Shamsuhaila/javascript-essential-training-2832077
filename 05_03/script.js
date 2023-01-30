@@ -51,3 +51,9 @@ const content = `
 `;
 
 main.innerHTML = content;
+
+//Element.getElementByClassName
+
+//Element.getElementById
+
+// Element in the case like => documents/windows and etc.
