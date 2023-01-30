@@ -16,22 +16,26 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
-const content = (
+const content = `
   <main>
     <article>
-      <h1>Everyday Backpack</h1>
+      <h1>Everyday Backpack ${everydayPack.name}</h1>
       <ul>
-        <li>Volume:</li>
-        <li>Color:</li>
-        <li>Age:</li>
-        <li>Number of pockets:</li>
-        <li>Left strap length:</li>
-        <li>Right strap length:</li>
-        <li>Lid status:</li>
+        <li>Volume: ${everydayPack.volume}</li>
+        <li>Color: ${everydayPack.color}</li>
+        <li>Age: ${everydayPack.backpackAge()}</li>
+        <li>Number of pockets: ${everydayPack.pocketNum}</li>
+        <li>Left strap length: ${everydayPack.strapLength.left}</li>
+        <li>Right strap length: ${everydayPack.strapLength.right} </li>
+        <li>Lid status: ${everydayPack.lidOpen}</li>
       </ul>
     </article>
   </main>
-);
+`;
+
+const content2 = "<h1>" + everydayPack.lidOpen + "</h1>";
+
+document.body.innerHTML = content + content2;
 
 console.log("The everydayPack object:", everydayPack);
 console.log("The pocketNum value:", everydayPack.pocketNum);

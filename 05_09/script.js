@@ -8,7 +8,7 @@ import Backpack from "./Backpack.js";
 
 const everydayPack = new Backpack(
   "Everyday Backpack",
-  30,
+  50,
   "grey",
   15,
   26,
@@ -19,7 +19,6 @@ const everydayPack = new Backpack(
 );
 
 const content = `
-  <article class="backpack" id="everyday">
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
     </figure>
@@ -45,9 +44,32 @@ const content = `
         everydayPack.lidOpen
       }</span></li>
     </ul>
-  </article>
 `;
 
-const main = document.querySelector(".maincontent");
+const main = document.querySelector(".maincontent"); //finding the main in the page
 
-main.innerHTML = content;
+const newArticle = document.createElement("article");
+newArticle.classList.add("backPack");
+newArticle.setAttribute("id", "everyday");
+newArticle.innerHTML = content;
+
+main.append(newArticle);
+
+const newContent = `
+      <ul> 
+        <li>Home</li>
+        <li>Profile</li>
+        <li>Exit</li>
+      </ul>
+
+`;
+const header = document.querySelector("header");
+
+const newNavigation = document.createElement("nav");
+newNavigation.classList.add("upperNav");
+newNavigation.setAttribute("id", "navBar");
+newNavigation.innerHTML = newContent;
+
+header.append(newNavigation);
+
+//main.innerHTML = content;
