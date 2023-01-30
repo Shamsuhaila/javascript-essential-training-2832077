@@ -25,3 +25,10 @@ console.log("Do more math:", doMoreMath(5, 6));
 //   let c = doSomeMath(a, b);
 //   console.log(`The sum of a and b is: ${c}`);
 // })();
+
+const DoSomething = function (x = 12, y = 4) {
+  z = x + y;
+  return z;
+};
+
+console.log("What is this", DoSomething());
