@@ -32,3 +32,16 @@ const DoSomething = function (x = 12, y = 4) {
 };
 
 console.log("What is this", DoSomething());
+
+const a = function () {
+  return 100;
+};
+
+console.log("function a", a());
+
+function second(z, y) {
+  x = z - y;
+  return x;
+}
+
+console.log("function second returns", second(100, 80));
